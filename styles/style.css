@@ -1,0 +1,300 @@
+/***********Header*******************/
+body{
+	margin:0;
+	padding:0;
+	
+	
+}
+#ul_menu{
+	list-style:none;
+	margin: 0;
+    padding: 0;
+	
+}
+.menu{
+	display:inline-block;
+	color:white;
+}
+.li_menu{
+	display:inline-block;
+	width:100px;
+	padding:20px;
+	float:left;
+	display: block;
+    text-align: center;
+	border-bottom:solid 2px black;
+    
+	
+}
+.li_menu:hover{
+	border-bottom:solid 2px #996666;
+	cursor:pointer;
+	
+	
+	
+}
+
+.a_menu{
+	padding-bottom: 30px;
+	text-decoration: 	none;
+	font-family: 'Oswald', sans-serif;
+	color: white;
+	
+}
+#inscription:hover{
+	
+	border:solid white 2px;
+	
+}
+
+#aaa:hover{
+	width:100%;
+	padding-bottom: 30px;
+	text-decoration: 	none;
+    cursor:pointer;
+	font-family: "Times New Roman", Georgia, Serif;
+}
+#inscription{
+	padding:10px;
+	float:left;
+	margin-LEFT :180px;
+	margin-top:-8px;
+	width:100px;
+	height:20px;
+	border:solid #996666 2px;
+	text-align:center;
+}
+#logo{
+	margin:40px;
+}
+#header{
+	background-color:black;
+	width:100%;
+}
+textarea{
+	width:300px;
+}
+.bouton{
+    color: #996666;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+	font:bold;
+	width:150px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 16px;
+	
+	margin:10px auto;
+	background-color:black;
+	border:1px solid #996666;
+}
+/*********************************************/
+/***********Content*******************/
+
+
+#content_index{
+	width:100%;
+    height:350px;
+}
+
+h1{
+	color:#996666;
+	font-family: 'Oswald', sans-serif;
+}
+h3{
+	color:#996666;
+	font-family: 'Oswald', sans-serif;
+}
+.texte{
+	
+	width:50%;
+	float:left;
+	margin-left:15px;
+}
+
+p{
+	
+	font-family: 'Oswald', sans-serif;
+	
+}
+
+
+#img img{
+	margin-left:130px;
+	width:30%;
+	float:left;
+	border:1px solid black;
+	margin-top:50px;
+}
+
+.bouteille img{
+	display:inline-block;
+	width:120px;
+	height:190px;
+	float:left;
+	margin:10px;
+}
+.bouteille ul{
+	color:grey;
+	font-family: 'Oswald', sans-serif;
+	list-style-image:url("../media/logo/icon_vin2.png");
+	
+}
+td img{
+	
+	display:block;
+	width:120px;
+	
+}
+.galerie{
+height:100%	;
+margin:70px auto;
+}
+.galerie li{
+display:inline-block;
+list-style:none;
+width:141px;
+height:150px;
+margin:5px;
+margin-right:150px;
+
+}
+.galerie li:nth-child(3){
+clear:left;
+}
+.galerie img{
+position:absolute;
+z-index:1;
+height:150px;width:auto;
+margin:0;
+box-shadow:0 0 3px black;
+-webkit-transition:all .5s cubic-bezier(.6,2,.4,1);
+    -moz-transition:all .5s cubic-bezier(.6,2,.4,1);
+     -ms-transition:all .5s cubic-bezier(.6,2,.4,1);
+      -o-transition:all .5s cubic-bezier(.6,2,.4,1);
+         transition:all .5s cubic-bezier(.6,2,.4,1);
+}
+.galerie li:hover img{
+z-index:5;
+-webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+     -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+         transform: scale(1.5);
+box-shadow:0 0 10px black;
+}
+ul.galerie:hover li:not(:hover) img{
+-webkit-filter: grayscale(1) blur(5px);
+    -moz-filter: grayscale(1) blur(5px);
+     -ms-filter: grayscale(1) blur(5px);
+      -o-filter: grayscale(1) blur(5px);
+         filter: grayscale(1) blur(5px);
+}
+fieldset
+{
+	border:none;	
+	
+}
+
+legend{
+	color:grey;
+	font-family: 'Oswald', sans-serif;
+	font-size:20px;
+	font-style:bold;
+}
+label{
+	color:grey;
+	font-family: 'Oswald', sans-serif;
+	font-size:10px; 	
+	font-style:bold;
+	width:300px;
+	display:inline-block;
+	margin-bottom:5px;
+}
+div{
+	margin-bottom:5px;
+}
+
+
+#nom, #prenom, #telephone, #courriel{
+
+margin-left:20px;
+padding:0;
+margin-bottom:5px;
+font-family: 'Oswald', sans-serif;
+}
+.bouteille ul{
+	display:inline-block;
+	text-align:center;
+}
+.right{
+margin-left:210px;
+margin-bottom:10px;
+}
+form{
+margin-left:15px;	
+}
+#content_contact{
+margin-left:15px;
+}
+#content_contact img{
+float:right;
+border:1px solid black;
+
+margin-right:80px;
+}
+table {
+border-collapse: collapse;
+width: 100%;
+}
+
+th, td {
+text-align: left;
+padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+background-color: #4CAF50;
+color: white;
+}
+/*******************************************/
+/***********Footer*******************/
+#footer{
+background-color:black;
+height:80px;
+padding-left:600px;
+padding-top:10px;
+margin-top:70px;
+}
+#join{
+color:white;
+margin-LEFT:80px;
+padding-bottom:12px;
+
+}
+#ul_footer{
+list-style:none;
+margin: 0;
+padding: 0;
+
+}
+.imFooter{
+float:left;
+
+margin-top:-20px;
+}
+.imFooter a{
+color:white;
+display:inline-block;
+
+padding:10px;
+padding-top:0;
+
+}
+.imFooter a:hover{
+color:#996666;
+}
