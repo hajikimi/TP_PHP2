@@ -13,7 +13,8 @@ body{
 }
 .menu{
 	display:inline-block;
-	color:white;
+	color:black;
+	
 }
 .li_menu{
 	display:inline-block;
