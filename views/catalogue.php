@@ -1,5 +1,5 @@
 <?php
-require_once ('data/data.php');
+require_once('data/data.php');
 ?>
 <?php require_once ('views/page_top.php');
 
@@ -24,7 +24,7 @@ require_once ('data/data.php');
     </ul>
 </div>
 <?php
-                    require_once ('views/page_bottom.php');
+                    require_once('views/footer.php');
 
 ?>
 <!DOCTYPE html>

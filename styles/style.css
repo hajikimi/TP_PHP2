@@ -45,16 +45,17 @@ body{
 #inscription:hover{
 	
 	border:solid white 2px;
+	text-decoration-color: #996666;
 	
 }
-
+/*
 #aaa:hover{
 	width:100%;
 	padding-bottom: 30px;
 	text-decoration: 	none;
     cursor:pointer;
 	font-family: "Times New Roman", Georgia, Serif;
-}
+}*/
 #inscription{
 	padding:10px;
 	float:left;
