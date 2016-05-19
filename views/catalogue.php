@@ -1,39 +1,27 @@
 <?php
-require_once('data/data.php');
+require_once('../data/data.php');
 ?>
-<?php require_once ('views/page_top.php');
+<?php require_once ('header.php');
 
 ?>
 <div id="main">
     <?php
 
     ?>
-    <ul>
 
-        <?php foreach ($data as $id => $item){?>
-            <li>
-                <div>
-                    <p> <?= $item['nom']?>, <span class="prix"><?=$item['prix'] ?></span></p>
-                    
-                    <img src="<?= $item['photo']"?>" alt=""/>
 
-                </div>
-            </li>
+        <?php
+        include '../data/data.php';
+        foreach ($catalog as $item){
 
-        <?php } ?>
-    </ul>
+            echo "<div class=\"bouteille\"><img class='bouteille' alt='$item[alt]' src='$item[filename]'/><p>$item[title]</p></div>";
+
+
+        }
+        ?>
+
 </div>
 <?php
-                    require_once('views/footer.php');
+                    require_once('footer.php');
 
 ?>
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Table</title>
-</head>
-<body>
-
-</body>
-</html>
