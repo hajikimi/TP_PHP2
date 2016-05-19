@@ -1,25 +1,91 @@
+
 <?php include 'header.php';?>
+
+<?php
+$nomErr = $prenomErr = $courrielErr  =$telephoneErr = "";
+$nom = $prenom = $courriel  = $telephone = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	if (empty($_POST["nom"])) {
+		$nomErr = "Nom obligatoire";
+	} else {
+		$nom = test_input($_POST["nom"]);
+
+
+		if (!preg_match("/^[a-zA-Z ]*$/",$nom)) {
+			$nomErr = "Seulement des lettre ";
+		}
+	}
+	if (empty($_POST["prenom"])) {
+		$prenomErr = "Prenom obligatoire";
+	} else {
+		$nom = test_input($_POST["prenom"]);
+
+
+		if (!preg_match("/^[a-zA-Z ]*$/",$prenom)) {
+			$prenomErr = "Seulement des lettre ";
+		}
+	}
+
+	if (empty($_POST["courriel"])) {
+		$courrielErr = "courriel obligatoire";
+	} else {
+		$courriel = test_input($_POST["courriel"]);
+
+
+		if (!filter_var($courriel, FILTER_VALIDATE_EMAIL)) {
+			$courrielErr = "Courriel invalide";
+		}
+	}
+
+	if (empty($_POST["telephone"])) {
+		$messageErr = "telephone obligatoire";
+	} else {
+		$message = test_input($_POST["telephone"]);
+
+		if (!preg_match("#(\+[0-9]{2}\([0-9]\))?[0-9]{10}#",$telephone)) {
+			$messageErr = "Numero telephone inccorect ";
+		}
+
+	}
+
+}
+
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
+?>
+
+
 		<div id="content_contact">
 			<h1>Contactez-Nous</h1>
 			<img src="../media/images/img13.jpg"/>
-			<form action="" method="get">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 				<fieldset>
 					<legend>Vos coordonnées:</legend>
 					<div>
 						<label for="nom">Nom:</label>
-						<input type="text" name="nom" id="nom" value="" placeholder="tapez votre nom ici"/>
+						<input type="text" name="nom" id="nom" value="<?php echo $nom;?>" placeholder="tapez votre nom ici"/>
+						<span class="error">* <?php echo $nomErr;?></span>
 					</div>
 					<div>
 						<label for="prenom">Prénom:</label>
-						<input type="text" name="prenom" id="prenom" value="" placeholder="tapez votre prénom ici"/>
+						<input type="text" name="prenom" id="prenom" value="<?php echo $prenom;?>" placeholder="tapez votre prénom ici"/>
+						<span class="error">* <?php echo $prenomErr;?></span>
 					</div>
 					<div>
 						<label for="telephone">Téléphone:</label>
-						<input type="tex" name="Téléphone" id="telephone" value="" placeholder="tapez votre numéro ici"/>
+						<input type="tex" name="Téléphone" id="telephone" value="<?php echo $telephone;?>" placeholder="tapez votre numéro ici"/>
+						<span class="error">* <?php echo $telephoneErr;?></span>
 					</div>
 					<div>
 						<label for="courriel">Courriel:</label>
-						<input type="text" name="courriel" id="courriel" value="" placeholder="tapez votre courriel ici"/>
+						<input type="text" name="courriel" id="courriel" value="<?php echo $courriel;?>" placeholder="tapez votre courriel ici"/>
+						<span class="error">* <?php echo $courrielErr;?></span>
 					</div>
 				</fieldset>
 				<div id="w">
