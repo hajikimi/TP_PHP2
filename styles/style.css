@@ -221,8 +221,9 @@ label{
 div{
 	margin-bottom:5px;
 }
-
-
+.error {
+	color: #996666;
+}
 #nom, #prenom, #telephone, #courriel{
 
 margin-left:20px;

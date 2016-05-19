@@ -14,8 +14,7 @@ require_once('../data/data.php');
     include '../data/data.php';
     foreach ($galerie as $item){
 
-        echo "<ul class='galerie'>
-				<li><img src='$item' alt=''/></li></ul>";
+        echo "<ul class='galerie'><li><img src='$item' alt=''/></li></ul>";
 
 
     }

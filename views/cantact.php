@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if (empty($_POST["prenom"])) {
 		$prenomErr = "Prenom obligatoire";
 	} else {
-		$nom = test_input($_POST["prenom"]);
+		$prenom = test_input($_POST["prenom"]);
 
 
 		if (!preg_match("/^[a-zA-Z ]*$/",$prenom)) {
@@ -39,12 +39,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 
 	if (empty($_POST["telephone"])) {
-		$messageErr = "telephone obligatoire";
+		$telephoneErr = "telephone obligatoire";
 	} else {
-		$message = test_input($_POST["telephone"]);
+		$telephone = test_input($_POST["telephone"]);
 
 		if (!preg_match("#(\+[0-9]{2}\([0-9]\))?[0-9]{10}#",$telephone)) {
-			$messageErr = "Numero telephone inccorect ";
+			$telephoneErr = "Numero telephone inccorect ";
+
 		}
 
 	}
@@ -69,22 +70,22 @@ function test_input($data) {
 					<legend>Vos coordonnées:</legend>
 					<div>
 						<label for="nom">Nom:</label>
-						<input type="text" name="nom" id="nom" value="<?php echo $nom;?>" placeholder="tapez votre nom ici"/>
+						<input type="text" name="nom" id="nom" value="<?php echo $nom;?>" />
 						<span class="error">* <?php echo $nomErr;?></span>
 					</div>
 					<div>
 						<label for="prenom">Prénom:</label>
-						<input type="text" name="prenom" id="prenom" value="<?php echo $prenom;?>" placeholder="tapez votre prénom ici"/>
+						<input type="text" name="prenom" id="prenom" value="<?php echo $prenom;?>"/>
 						<span class="error">* <?php echo $prenomErr;?></span>
 					</div>
 					<div>
 						<label for="telephone">Téléphone:</label>
-						<input type="tex" name="Téléphone" id="telephone" value="<?php echo $telephone;?>" placeholder="tapez votre numéro ici"/>
+						<input type="text" name="Téléphone" id="telephone" value="<?php echo $telephone;?>"/>
 						<span class="error">* <?php echo $telephoneErr;?></span>
 					</div>
 					<div>
 						<label for="courriel">Courriel:</label>
-						<input type="text" name="courriel" id="courriel" value="<?php echo $courriel;?>" placeholder="tapez votre courriel ici"/>
+						<input type="text" name="courriel" id="courriel" value="<?php echo $courriel;?>" />
 						<span class="error">* <?php echo $courrielErr;?></span>
 					</div>
 				</fieldset>
