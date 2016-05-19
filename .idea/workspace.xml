@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5ce34667-9c0c-4c0e-99f3-c23a75ac67b5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="$PROJECT_DIR$/styles/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/header.php" afterPath="$PROJECT_DIR$/views/header.php" />
     </list>
     <ignored path="TP_PHP2.iws" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -38,8 +39,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+            <state relative-caret-position="275">
+              <caret line="67" column="111" selection-start-line="67" selection-start-column="111" selection-end-line="67" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -78,9 +79,11 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-906">
-              <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="-2031">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+              <folding>
+                <element signature="e#1457#1491#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +91,8 @@
       <file leaf-file-name="cantact.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/cantact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="377">
+              <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -125,7 +128,6 @@
       <list>
         <option value="$PROJECT_DIR$/views/page_bottom.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="github.com/gpenissard/P62_E16_TP_Agence.git" />
         <option value="$PROJECT_DIR$/data/data.php" />
@@ -134,6 +136,7 @@
         <option value="$PROJECT_DIR$/views/footer.php" />
         <option value="$PROJECT_DIR$/views/forfait.php" />
         <option value="$PROJECT_DIR$/views/cantact.php" />
+        <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/views/header.php" />
       </list>
     </option>
@@ -300,12 +303,12 @@
       <workItem from="1463488451497" duration="3611000" />
       <workItem from="1463498354356" duration="110000" />
       <workItem from="1463591954105" duration="2806000" />
-      <workItem from="1463632580578" duration="1836000" />
+      <workItem from="1463632580578" duration="2353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15160000" />
+    <option name="totallyTimeSpent" value="15677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -654,14 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/catalogue.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -670,10 +665,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
+    <entry file="file://$PROJECT_DIR$/data/data.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-906">
-          <caret line="35" column="1" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        <state relative-caret-position="309">
+          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -694,26 +697,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/data.php">
+    <entry file="file://$PROJECT_DIR$/views/cantact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="44" column="32" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
+        <state relative-caret-position="377">
+          <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cantact.php">
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="-2031">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+          <folding>
+            <element signature="e#1457#1491#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
+        <state relative-caret-position="275">
+          <caret line="67" column="111" selection-start-line="67" selection-start-column="111" selection-end-line="67" selection-end-column="111" />
           <folding />
         </state>
       </provider>

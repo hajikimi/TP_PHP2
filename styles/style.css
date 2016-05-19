@@ -94,7 +94,10 @@ textarea{
 }
 /*********************************************/
 /***********Content*******************/
+#login_logout_form {
+	display: inline-block;
 
+}
 
 #content_index{
 	width:100%;

@@ -62,16 +62,16 @@ elseif (array_key_exists('disconnect', $_POST)) {
             <li class="li_menu" ><a href="panier.php" class="a_menu" >Panier</a></li>
             <li class="li_menu" ><a href="cantact.php" class="a_menu" >Cantact</a></li>
             <div id="login_logout_form">
-                <span><?php echo $login_message; ?></span>
+                
                 <?php if ($user_is_loggedIn) { ?>
                     <form method="post">
-                        <input type="submit" name="disconnect" id="se_deconnecter" value="Déconnexion"/>
+                        <input class='bouton' type="submit" name="disconnect" id="se_deconnecter" value="Logout"/>
                     </form>
                 <?php } else { ?>
                     <form method="post">
                         <input type="text" name="username" id="username" value="<?php echo isset($username) ? $username : ''; ?>"/><br>
                         <input type="password" name="password" id="password" value="<?php echo isset($password) ? $password : ''; ?>"/><br>
-                        <input type="submit" name="connect" id="se_connecter" value="Connexion" />
+                        <input class='bouton'type="submit" name="connect" id="se_connecter" value="Login" />
                     </form>
                 <?php } ?>
             </div>
