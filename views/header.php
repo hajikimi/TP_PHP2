@@ -1,4 +1,43 @@
+<?php
+define('PSESS_USERNAME', 'username');
+$login_message = ''; // Message à afficher en cas de bonne ou de mauvaise connexion
+$user_is_loggedIn = false; // Indique que l'utilisateur est connecté ou ne l'est pas
+$username = null; // Valeur du username
+$password = null; // Valeur du password
 
+session_start(); // Ne plus le mettre ailleurs si le script courant est sur toutes les pages
+// L'utilisateur est-il en train de se connecter ?
+if (array_key_exists('connect', $_POST)
+    && array_key_exists('username', $_POST)
+    && array_key_exists('password', $_POST))
+{
+    // L'utilisateur cherche à se connecter ....
+    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    require_once('_authenticate.php'); // Appel du script qui gère l'authentification
+    if (authenticate($username, $password)) {
+        // L'utilisateur est authentifié
+        $_SESSION[PSESS_USERNAME] = $username;
+        $user_is_loggedIn = true;
+        $login_message = "Bonjour $username";
+    } else {
+        $login_message = 'L\'identificateur et le mot de passe fournis ne concordent pas.';
+    }
+}
+elseif (array_key_exists('disconnect', $_POST)) {
+    // L'utilisateur cherche à se déconnecter ....
+    unset($_SESSION[PSESS_USERNAME]); // Supprimer la variable 'username' de la session
+    $user_is_loggedIn = false;
+} else { // Cas du GET
+    $user_is_loggedIn = array_key_exists(PSESS_USERNAME, $_SESSION);
+    if ($user_is_loggedIn) {
+        $username = $_SESSION[PSESS_USERNAME];
+        $login_message = "Bonjour $username";
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -21,8 +60,21 @@
             <li class="li_menu" ><a href="galerie.php" class="a_menu" >Galerie</a></li>
             <li class="li_menu"><a href="catalogue.php" class="a_menu">Catalogue</a></li>
             <li class="li_menu" ><a href="panier.php" class="a_menu" >Panier</a></li>
-
-            <li id="inscription"> <a id="aaa" href="login.php"class="a_menu">Login</a></li>
+            <li class="li_menu" ><a href="cantact.php" class="a_menu" >Cantact</a></li>
+            <div id="login_logout_form">
+                <span><?php echo $login_message; ?></span>
+                <?php if ($user_is_loggedIn) { ?>
+                    <form method="post">
+                        <input type="submit" name="disconnect" id="se_deconnecter" value="Déconnexion"/>
+                    </form>
+                <?php } else { ?>
+                    <form method="post">
+                        <input type="text" name="username" id="username" value="<?php echo isset($username) ? $username : ''; ?>"/><br>
+                        <input type="password" name="password" id="password" value="<?php echo isset($password) ? $password : ''; ?>"/><br>
+                        <input type="submit" name="connect" id="se_connecter" value="Connexion" />
+                    </form>
+                <?php } ?>
+            </div>
         </ul>
     </div>
 </div>
